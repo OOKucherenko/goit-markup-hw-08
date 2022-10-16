@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-txt-сl);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

@@ -1,0 +1,158 @@
+.header {
+    color: var(--header-color);
+    display: flex;
+    border-bottom: 1px solid #ececec;
+    height: 80px;
+ 
+
+    &-container {
+       display: flex;
+       align-items: center;
+    }
+}
+
+
+.header>.nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header>.list {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+ 
+    &-nav {
+       height: 80px;
+       gap: 50px;
+       align-items: center;
+       display: flex;
+    }
+
+    &-header {
+       margin-left: auto;
+       margin-right: 0;
+       gap: 50px;
+    }
+
+    &-mail,
+    &-icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}
+
+
+.item-nav {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.icon {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--icon-text);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+       color: var(--logo-text);
+    }
+}
+
+.icon-blue {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--logo-text);
+    position: relative;
+
+
+    &.current::after {
+       content: '';
+       display: flex;
+       position: absolute;
+
+       left: 0;
+       bottom: 0;
+
+       bottom: -1px;
+       width: 100%;
+       height: 4px;
+       @include border-radius (2px);
+       background-color: var(--logo-text);
+    }
+}
+
+
+.link:hover,
+.link:focus {
+    color: var(--logo-text);
+}
+
+.link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    color: var(--link-text);
+
+    &:hover,
+    &:focus {
+        color: var(--logo-text);
+    }
+}
+
+.icon-contact:hover,
+.icon-contact:focus {
+    color: var(--logo-text);
+}
+
+.icon-port {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--logo-text);
+    position: relative;
+
+
+    &:hover,
+    &:focus {
+        color: var(--logo-text);
+    }
+
+    &.current::after {
+        content: '';
+
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--logo-text);
+    }
+}
