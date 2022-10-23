@@ -1,36 +1,48 @@
 .logo {
-    font-family: Raleway;
-    font-weight: 700;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03em;
+  color: var(--logo-text);
+  margin-right: 276px;
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+  }
+  @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
-    color: var(--logo-text);
-    margin-right: 93px;
+  }
 }
 
 .logo-web {
-    font-family: Raleway;
-    font-weight: 700;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03em;
+  color: var(--main-txt-сl);
+
+  @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
-    color: var(--main-txt-сl);
+  }
 }
 
 .loggo {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
-    color: var(--logo-text);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: var(--logo-text);
 }
 
 .logo-footer {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
-    color: var(--color-text);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: var(--color-text);
 }

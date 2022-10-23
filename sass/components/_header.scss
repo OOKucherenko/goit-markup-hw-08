@@ -1,158 +1,175 @@
 .header {
-    color: var(--header-color);
-    display: flex;
-    border-bottom: 1px solid #ececec;
-    height: 80px;
- 
+  color: var(--header-color);
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  // height: 80px;
 
-    &-container {
-       display: flex;
-       align-items: center;
-    }
-}
-
-
-.header>.nav {
-    height: 80px;
+  &-container {
     display: flex;
     align-items: center;
+  }
 }
 
-.header>.list {
+.header .nav {
+  // height: 80px;
+  // display: flex;
+  align-items: center;
+
+  display: none;
+
+  @media screen and (min-width: 768px) {
     display: flex;
-    align-items: center;
+  }
 }
 
 .list {
-    display: flex;
- 
-    &-nav {
-       height: 80px;
-       gap: 50px;
-       align-items: center;
-       display: flex;
-    }
+  display: flex;
 
-    &-header {
-       margin-left: auto;
-       margin-right: 0;
-       gap: 50px;
-    }
-
-    &-mail,
-    &-icon {
-        margin-right: 10px;
-        fill: currentColor;
-    }
-}
-
-
-.item-nav {
-    height: 100%;
+  &-nav {
+    height: 80px;
+    gap: 50px;
     align-items: center;
     display: flex;
+    @media screen and (max-width: 767px) {
+      height: 60px;
+    }
+  }
+
+  &-header {
+    display: none;
+    gap: 50px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: 96px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 315px;
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+
+  &-mail,
+  &-icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.item-nav {
+  height: 100%;
+  align-items: center;
+  display: flex;
 }
 
 .icon {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    color: var(--icon-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--icon-text);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-       color: var(--logo-text);
-    }
+  &:hover,
+  &:focus {
+    color: var(--logo-text);
+  }
 }
 
 .icon-blue {
-    height: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--logo-text);
+  position: relative;
+
+  &.current::after {
+    content: '';
     display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    color: var(--logo-text);
-    position: relative;
+    position: absolute;
 
+    left: 0;
+    bottom: 0;
 
-    &.current::after {
-       content: '';
-       display: flex;
-       position: absolute;
-
-       left: 0;
-       bottom: 0;
-
-       bottom: -1px;
-       width: 100%;
-       height: 4px;
-       @include border-radius (2px);
-       background-color: var(--logo-text);
-    }
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    @include border-radius(2px);
+    background-color: var(--logo-text);
+  }
 }
-
 
 .link:hover,
 .link:focus {
-    color: var(--logo-text);
+  color: var(--logo-text);
 }
 
 .link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    color: var(--link-text);
+  color: var(--link-text);
 
-    &:hover,
-    &:focus {
-        color: var(--logo-text);
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: calc(16 / 12);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--logo-text);
+  }
 }
 
 .icon-contact:hover,
 .icon-contact:focus {
-    color: var(--logo-text);
+  color: var(--logo-text);
 }
 
 .icon-port {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--logo-text);
+  position: relative;
+
+  &:hover,
+  &:focus {
     color: var(--logo-text);
-    position: relative;
+  }
 
+  &.current::after {
+    content: '';
 
-    &:hover,
-    &:focus {
-        color: var(--logo-text);
-    }
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
-    &.current::after {
-        content: '';
-
-        display: flex;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-
-        bottom: -1px;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--logo-text);
-    }
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--logo-text);
+  }
 }

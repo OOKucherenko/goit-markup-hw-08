@@ -46,17 +46,29 @@
             </a>
           </li>
         </ul>
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40px" height="40px">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main class="main">
       <section class="section-main">
-        <!--шапка-->
-        <h1 class="title">
-          Ефективні рішення для<br />
-          вашого бізнесу
-        </h1>
-        <button type="button" class="button" data-modal-open>Замовити послугу</button>
+        <div class="container">
+          <!--шапка-->
+          <h1 class="title">
+            Ефективні рішення для<br />
+            вашого бізнесу
+          </h1>
+          <button type="button" class="button" data-modal-open>Замовити послугу</button>
+        </div>
       </section>
 
       <section class="section">
@@ -153,20 +165,31 @@
           </ul>
         </div>
       </section>
-
-      <section class="comands section">
-        <!--Наша команда-->
+      <!--
+      <section class="comands">
+        Наша команда
         <div class="container">
           <h2 class="comands__title">Наша команда</h2>
           <ul class="comands__list list">
             <li class="comands__item">
-              <img
-                src="./images/photoone.jpg"
-                alt="imgone"
-                width="270"
-                height="368"
-                class="comands__img"
-              />
+              <picture>
+                <source
+                  srcset="./images/img1_ds_1x.jpg 1x, ./images/comands/img1_ds_2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/comands/img1_tb_@1x.jpg 1x, ./images/comands/img1_tb_@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/comands/teamcard1-mob-1x.jpg,
+                    ./images/comands/img1_sm_@2x.jpg      2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/comands/img1_sm_1x.jpg" alt="imgone" class="comands__img" />
+              </picture>
               <div class="dignity">
                 <h3 class="dignity__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="dignity__text">Product Designer</p>
@@ -334,7 +357,7 @@
           </ul>
         </div>
       </section>
-
+-->
       <section class="section">
         <div class="container">
           <h2 class="client__title">Постійні клієнти</h2>
@@ -389,72 +412,75 @@
     <footer class="footer">
       <!--Підвал-->
       <div class="container container-footer">
-        <div class="container-contacts">
-          <a href="" class="loggo">Web<span class="logo-footer">Studio</span></a>
-          <address class="adres">
-            <p class="city">м. Київ, пр-т Лесі Українки, 26</p>
-            <ul class="list list-city">
-              <li class="list-city__item">
-                <a href="mailto:info@devstudio.com" class="link-footer">info@devstudio.com</a>
+        <div class="container-tab">
+          <div class="container-contacts">
+            <a href="" class="loggo">Web<span class="logo-footer">Studio</span></a>
+            <address class="adres">
+              <p class="city">м. Київ, пр-т Лесі Українки, 26</p>
+              <ul class="list list-city">
+                <li class="list-city__item">
+                  <a href="mailto:info@devstudio.com" class="link-footer">info@devstudio.com</a>
+                </li>
+                <li class="list-city__item">
+                  <a href="tel:+380961111111" class="link-tel-footer">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="container-social">
+            <h3 class="footer-title">приєднуйтесь</h3>
+            <ul class="social">
+              <li>
+                <a class="social-link-footer" href="https://www.instagram.com/">
+                  <svg class="social-icon-footer" width="20px" height="20px">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="list-city__item">
-                <a href="tel:+380961111111" class="link-tel-footer">+38 096 111 11 11</a>
+              <li>
+                <a class="social-link-footer" href="https://twitter.com/">
+                  <svg class="social-icon-footer" width="20px" height="20px">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-link-footer" href="https://www.facebook.com/">
+                  <svg class="social-icon-footer" width="20px" height="20px">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-link-footer" href="https://www.linkedin.com/">
+                  <svg class="social-icon-footer" width="20px" height="20px">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="container-social">
-          <h3 class="footer-title">приєднуйтесь</h3>
-          <ul class="social">
-            <li>
-              <a class="social-link-footer" href="https://www.instagram.com/">
-                <svg class="social-icon-footer" width="20px" height="20px">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link-footer" href="https://twitter.com/">
-                <svg class="social-icon-footer" width="20px" height="20px">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link-footer" href="https://www.facebook.com/">
-                <svg class="social-icon-footer" width="20px" height="20px">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link-footer" href="https://www.linkedin.com/">
-                <svg class="social-icon-footer" width="20px" height="20px">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!--Підпишиться на розсилку-->
+        <!-- Підпишиться на розсилку -->
         <div class="container-mail">
-          <h3 class="footer-title">Підпишіться на розсилку</h3>
           <form class="form">
-            <label class="label-mail">
-              <input
-                class="label-mail-input"
-                type="email"
-                name="email-input"
-                placeholder="E-mail"
-              />
-            </label>
-            <button class="mail-btn" type="submit">
-              <span>Підписатися</span>
-              <svg class="mail-btn-icons" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
+            <h3 class="footer-title">Підпишіться на розсилку</h3>
+            <div class="thumb-form">
+              <label class="label-mail">
+                <input
+                  class="label-mail-input"
+                  type="email"
+                  name="email-input"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button class="mail-btn" type="submit">
+                <span>Підписатися</span>
+                <svg class="mail-btn-icons" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -531,6 +557,43 @@
         </div>
       </div>
     </div>
+
+    <!--Mobile menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle-icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="mobile-link current">Студія</a></li>
+        <li><a href="portfolio.html" class="mobile-link">Портфоліо</a></li>
+        <li><a href="" class="mobile-link">Контакти</a></li>
+      </ul>
+      <ul class="contact-menu">
+        <li>
+          <a href="tel:+380961111111" class="contact-phon"> +38 096 111 11 11 </a>
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="contact-link"> info@devstudio.com </a>
+        </li>
+      </ul>
+      <ul class="social-menu">
+        <li class="item"><a href="" class="social-link">Instagram</a></li>
+        <li class="item"><a href="" class="social-link">Twitter</a></li>
+        <li class="item"><a href="" class="social-link">Facebook</a></li>
+        <li class="item"><a href="" class="social-link">LinkedIn</a></li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
