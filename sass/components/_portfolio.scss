@@ -16,11 +16,24 @@
 }
 
 .btn-margin {
-  margin-right: 20px;
+  margin-right: 0;
+  @media screen and (min-width: 462px) {
+    margin-right: 20px;
+  }
   @media screen and (min-width: 768px) {
     margin-right: 0;
   }
 }
+.btn-margin-second {
+  margin-right: 0;
+  @media screen and (min-width: 350px) {
+    margin-right: 20px;
+  }
+  @media screen and (min-width: 370px) {
+    margin-right: 0;
+  }
+}
+
 .work-section {
   display: block;
 }
@@ -33,16 +46,12 @@
   gap: 30px;
 
   &-item {
-    width: 370px;
+    box-sizing: border-box;
+    max-width: 450px;
     background: var(--color-text);
     border: 1px solid var(--container-color);
-
     width: 100%;
-    @media screen and (min-width: 480px) {
-      flex-wrap: wrap;
-      // gap: 30px;
-      justify-content: center;
-    }
+
     @media screen and (min-width: 768px) {
       width: 354px;
     }
@@ -53,8 +62,19 @@
 }
 
 .animation {
+  // position: relative;
+  // overflow: hidden;
+
+  width: 100%;
+  max-height: 294px;
   position: relative;
   overflow: hidden;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .overlay {

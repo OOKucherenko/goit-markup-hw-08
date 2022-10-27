@@ -524,10 +524,29 @@ ul {
 }
 
 .btn-margin {
-  margin-right: 20px;
+  margin-right: 0;
+}
+@media screen and (min-width: 462px) {
+  .btn-margin {
+    margin-right: 20px;
+  }
 }
 @media screen and (min-width: 768px) {
   .btn-margin {
+    margin-right: 0;
+  }
+}
+
+.btn-margin-second {
+  margin-right: 0;
+}
+@media screen and (min-width: 350px) {
+  .btn-margin-second {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 370px) {
+  .btn-margin-second {
     margin-right: 0;
   }
 }
@@ -547,19 +566,12 @@ ul {
   gap: 30px;
 }
 .portfolio-item {
-  width: 370px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 450px;
   background: var(--color-text);
   border: 1px solid var(--container-color);
   width: 100%;
-}
-@media screen and (min-width: 480px) {
-  .portfolio-item {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 @media screen and (min-width: 768px) {
   .portfolio-item {
@@ -573,8 +585,16 @@ ul {
 }
 
 .animation {
+  width: 100%;
+  max-height: 294px;
   position: relative;
   overflow: hidden;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .overlay {
